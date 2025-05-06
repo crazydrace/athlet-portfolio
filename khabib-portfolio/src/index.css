@@ -214,3 +214,81 @@
     transform: translateY(0);
   }
 }
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* For the modal transition */
+.modal-enter {
+  opacity: 0;
+}
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transition: opacity;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delay {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 10s ease-in-out infinite;
+}
+
+/* For the carousel transition */
+.carousel-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.carousel-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 700ms ease-in-out;
+}
+.carousel-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.carousel-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 700ms ease-in-out;
+}
